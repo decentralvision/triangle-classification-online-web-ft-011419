@@ -8,7 +8,11 @@ class Triangle
       rescue TriangleError => error
         puts error.message
       end
-    elsif @sides.uniq == 1
+    elsif @sides.uniq.size == 1
+      @kind = :equilateral
+    elsif @sides.uniq.size == 2
+      @kind = :isosceles
+    elsif @
     end
   end
   class TriangleError < StandardError
