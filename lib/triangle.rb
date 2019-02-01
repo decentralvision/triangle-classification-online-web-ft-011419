@@ -4,6 +4,7 @@ class Triangle
   def initialize(side_1, side_2, side_3)
     @sides = [side_1, side_2, side_3]
     if sides.any? {|side| side <= 0 || (@sides).reduce(:+) - side <= side }
+      binding.pry
       begin
         raise TriangleError
       rescue TriangleError => error
