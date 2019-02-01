@@ -9,6 +9,7 @@ class Triangle
   def kind
     if @sides.any? {|side| side <= 0 || (@sides).reduce(:+) - side <= side }
       begin
+        binding.pry
         raise TriangleError
       rescue TriangleError => error
         puts error.message
