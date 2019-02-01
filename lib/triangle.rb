@@ -8,8 +8,7 @@ class Triangle
       rescue TriangleError => error
         puts error.message
       end
-    else
-
+    elsif @sides.uniq == 1
     end
   end
   class TriangleError < StandardError
