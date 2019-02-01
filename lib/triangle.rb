@@ -6,11 +6,7 @@ class Triangle
   end
   def kind
     if sides.any? {|side| side <= 0 || (@sides).reduce(:+) - side <= side }
-      begin
-        raise TriangleError
-      rescue TriangleError => error
-        puts error.message
-      end
+      raise TriangleError
     elsif @sides.uniq.size == 1
       @kind = :equilateral
     elsif @sides.uniq.size == 2
