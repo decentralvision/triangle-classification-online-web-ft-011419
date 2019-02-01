@@ -3,10 +3,19 @@ class Triangle
   def initialize(side_1, side_2, side_3)
     @sides = [side_1, side_2, side_3]
     if sides.any? {|side| side <= 0 || (@sides - [side]).inject(0, :+) <= side }
-      raise TriangleError
+      begin 
+        raise TriangleError
+      rescue PartnerError => error
+        puts error.message
+      end
+    else
+      puts "cool triangle bruh"
+    end
 
   end
   class TriangleError < StandardError
-
+    def message
+      "Invalid triangle, each side must be larger than 0 and the length of any side must not exceed the sum of the lengths of the other two sides"
+    end
   end
 end
