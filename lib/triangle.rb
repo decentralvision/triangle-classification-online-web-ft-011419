@@ -3,6 +3,8 @@ class Triangle
   attr_accessor :sides, :kind
   def initialize(side_1, side_2, side_3)
     @sides = [side_1, side_2, side_3]
+  end
+  def kind
     if sides.any? {|side| side <= 0 || (@sides).reduce(:+) - side <= side }
       begin
         raise TriangleError
