@@ -8,7 +8,6 @@ class Triangle
     if @sides.any? {|side| side <= 0 || (@sides).reduce(:+) - side <= side }
       begin
         raise TriangleError
-        binding.pry
       rescue TriangleError => error
         puts error.message
       end
