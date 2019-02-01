@@ -10,7 +10,6 @@ class Triangle
         puts error.message
       end
     elsif @sides.uniq.size == 1
-      binding.pry
       @kind = :equilateral
     elsif @sides.uniq.size == 2
       @kind = :isosceles
