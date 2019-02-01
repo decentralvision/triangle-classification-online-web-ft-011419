@@ -5,7 +5,7 @@ class Triangle
     if sides.any? {|side| side <= 0 || (@sides - [side]).inject(0, :+) <= side }
       begin
         raise TriangleError
-      rescue PartnerError => error
+      rescue TriangleError => error
         puts error.message
       end
     else
