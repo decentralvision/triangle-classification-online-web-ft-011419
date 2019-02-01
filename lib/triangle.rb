@@ -1,3 +1,4 @@
+require 'pry'
 class Triangle
   attr_accessor :sides, :kind
   def initialize(side_1, side_2, side_3)
