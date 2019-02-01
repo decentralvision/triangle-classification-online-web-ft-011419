@@ -1,5 +1,5 @@
 class Triangle
-  attr_accessor :sides
+  attr_accessor :sides, :kind
   def initialize(side_1, side_2, side_3)
     @sides = [side_1, side_2, side_3]
     if sides.any? {|side| side <= 0 || (@sides - [side]).inject(0, :+) <= side }
@@ -9,7 +9,7 @@ class Triangle
         puts error.message
       end
     else
-
+      
     end
   end
   class TriangleError < StandardError
