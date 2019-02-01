@@ -1,6 +1,6 @@
 require 'pry'
 class Triangle
-  attr_accessor :sides, :kind
+  attr_accessor :sides
   def initialize(side_1, side_2, side_3)
     @sides = [side_1, side_2, side_3]
   end
@@ -13,11 +13,11 @@ class Triangle
         puts error.message
       end
     elsif @sides.uniq.size == 1
-      @kind = :equilateral
+      :equilateral
     elsif @sides.uniq.size == 2
-      @kind = :isosceles
+      :isosceles
     elsif @sides.uniq.size == 3
-      @kind = :scalene
+      :scalene
     end
   end
   class TriangleError < StandardError
