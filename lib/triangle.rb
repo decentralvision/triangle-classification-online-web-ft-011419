@@ -12,7 +12,8 @@ class Triangle
       @kind = :equilateral
     elsif @sides.uniq.size == 2
       @kind = :isosceles
-    elsif @
+    elsif @sides.uniq.size == 3
+      @kind = :scalene
     end
   end
   class TriangleError < StandardError
