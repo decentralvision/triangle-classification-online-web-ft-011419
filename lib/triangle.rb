@@ -21,4 +21,5 @@ class Triangle
       "Invalid triangle, each side must be larger than 0 and the length of any side must not exceed the sum of the lengths of the other two sides"
     end
   end
+  self
 end
