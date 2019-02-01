@@ -9,7 +9,7 @@ class Triangle
         puts error.message
       end
     else
-      
+
     end
   end
   class TriangleError < StandardError
